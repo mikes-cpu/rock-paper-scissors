@@ -165,41 +165,80 @@ const displayWinner = (handDecision) => {
     drawText.innerText = "It was a draw";
     drawText.classList.add("resultText", "drawText");
     container.appendChild(drawText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
   if (handDecision === "rock" && computerChoice.classList[1] === "scissors") {
     const rockWinText = document.createElement("p");
     rockWinText.innerText = "You win this round";
     rockWinText.classList.add("resultText", "rockWinText");
     container.appendChild(rockWinText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
   if (handDecision === "rock" && computerChoice.classList[1] === "paper") {
     const rockLooseText = document.createElement("p");
     rockLooseText.innerText = "You loose this round";
     rockLooseText.classList.add("resultText", "rockLooseText");
     container.appendChild(rockLooseText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
   if (handDecision === "paper" && computerChoice.classList[1] === "rock") {
     const paperWinText = document.createElement("p");
     paperWinText.innerText = "You win this round";
     paperWinText.classList.add("resultText", "paperWinText");
     container.appendChild(paperWinText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
   if (handDecision === "paper" && computerChoice.classList[1] === "scissors") {
     const paperLooseText = document.createElement("p");
     paperLooseText.innerText = "You loose this round";
     paperLooseText.classList.add("resultText", "paperLooseText");
     container.appendChild(paperLooseText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
   if (handDecision === "scissors" && computerChoice.classList[1] === "paper") {
     const scissorWinText = document.createElement("p");
     scissorWinText.innerText = "You win this round";
     scissorWinText.classList.add("resultText", "scissorWinText");
     container.appendChild(scissorWinText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
   if (handDecision === "scissors" && computerChoice.classList[1] === "rock") {
     const scissorLooseText = document.createElement("p");
     scissorLooseText.innerText = "You loose this round";
     scissorLooseText.classList.add("resultText", "scissorLooseText");
     container.appendChild(scissorLooseText);
+    const newGameButton = document.createElement("Button");
+    newGameButton.innerText = "New Game";
+    newGameButton.classList.add("newGameButton");
+    container.appendChild(newGameButton);
+    newGameButton.addEventListener("click", refreshPage);
   }
+};
+
+const refreshPage = () => {
+  location.reload();
 };
